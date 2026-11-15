@@ -1,8 +1,8 @@
 intro: >-
-  We write research software for instrument calibration, fiber-optic sensing, and geodynamics.
+  We write software for testing and calibrating instruments, fiber-optic sensing, and geodynamics.
   These packages are still in development, and their repositories are private for now. We plan to
-  release each one alongside the paper that describes it, and we're happy to share early versions on
-  request.
+  release them as they mature, the research codes alongside the papers that describe them, and we're
+  happy to share early versions on request.
 
 items:
   - name: bbcalpy
@@ -23,6 +23,29 @@ items:
     logo: assets/img/software/bbcalpy-logo.png
     image: assets/img/software/bbcalpy-bode.png
     image_alt: Bode plot of a measured seismometer response compared with the nominal response
+
+  - name: Ristra
+    anchor: ristra
+    tagline: Pier testing for seismic sensors
+    language: Python · SeisComP
+    status: In development · private
+    status_key: active
+    description: >-
+      Ristra is a system for pier-testing seismic sensors, built on the open-source SeisComP
+      platform. It records a pier of sensors beside a reference instrument, evaluates each unit's
+      noise, response, calibration, orientation, and timing, and recommends whether it passes, fails,
+      or should be retested, with an uncertainty on every measurement.
+    features:
+      - Sets SeisComP up to record a pier from one facility file and a short plan for each run
+      - Evaluates every sensor against the reference automatically, with clear pass, fail, and retest rules
+      - An interface for running tests, reviewing results, and signing off a run, now in draft
+      - Uses bbcalpy for the calibration fits
+    logo: assets/img/software/ristra-logo.svg
+    image: assets/img/software/ristra-results.png
+    image_alt: "Draft of Ristra's results page for one pier run on example data: a summary of pass, fail, retest, and review decisions, and one sensor flagged for review because its horizontal components are rotated close to the limit"
+    related:
+      - label: bbcalpy
+        url: "#bbcalpy"
 
   - name: DAScal
     anchor: dascal
